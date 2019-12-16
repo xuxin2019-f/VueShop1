@@ -24,9 +24,11 @@
     "babel-plugin-component": "^1.1.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "vue-cli-plugin-element": "^1.0.1",
     "vue-template-compiler": "^2.6.10"
-  },
+ },
   "eslintConfig": {
     "root": true,
     "env": {
@@ -36,7 +38,9 @@
       "plugin:vue/essential",
       "@vue/standard"
     ],
-    "rules": {},
+    "rules": {
+      "space-before-function-paren" : 0
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
@@ -46,3 +50,4 @@
     "last 2 versions"
   ]
 }
+
