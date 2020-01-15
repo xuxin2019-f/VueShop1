@@ -232,9 +232,10 @@ export default {
         const form = _.cloneDeep(this.addForm)
         form.goods_cat = this.addForm.goods_cat.join(',')
         // 处理attrs数组，数组中需要包含商品的动态参数和静态属性
-        // 将manyTableData（动态参数）处理添加到attrs
+        // 将manyTableData（动态参数）
+        console.log(this.manyTableData)
         this.manyTableData.forEach(item=>{
-          form.attrs.push({ attr_id:item.attr_id, attr_value:item.attr_vals.join('') })
+          form.attrs.push({ attr_id:item.attr_id, attr_value:item.attr_vals.join(',') })
         })
         // 将onlyTableData（静态属性）处理添加到attrs
         this.onlyTableData.forEach(item=>{
